@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1b2e;
+    color: #f0eaff;
+    padding-top: 60px; /* space for navbar */
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #3c1361;
+    overflow: hidden;
+    padding: 15px 30px;
+    z-index: 999;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f0eaff;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #5e239d;
+    border-radius: 5px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #e0c3fc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #2a2141;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #3d2b5c;
+    color: #ffffff;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #5c3f84;
+}
+
+table th {
+    background-color: #5c3f84;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #4a3672;
+}
+
+/* Buttons */
+button, input[type="submit"], .btn {
+    background-color: #7c4dff;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover, .btn:hover {
+    background-color: #9c6dff;
+}
+
+/* Messages */
+.message {
+    background-color: #4e3279;
+    color: #e0c3fc;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px solid #7c4dff;
+    border-radius: 4px;
+}
+
+/* Action buttons */
+.action-buttons a {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.action-buttons a.edit {
+    color: #ffc107;
+}
+
+.action-buttons a.delete {
+    color: #ff4d4d;
+}
