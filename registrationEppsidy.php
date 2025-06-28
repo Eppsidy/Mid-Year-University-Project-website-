@@ -7,6 +7,7 @@ session_start();
 <title>EPPSIDY - Register</title>
 <link rel="stylesheet" href="Login.css">
 <script src="LoginValidation.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 

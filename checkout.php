@@ -30,11 +30,11 @@ if (!isset($_SESSION["cart_item"]) || empty($_SESSION["cart_item"])) {
     foreach ($_SESSION["cart_item"] as $item) {
         $item_price = $item["quantity"] * $item["price"];
         echo "<tr>
-                <td><img src='uploads/" . $item["image"] . "' alt='" . $item["name"] . "' height='50'></td>
-                <td>".$item["name"]."</td>
-                <td>".$item["quantity"]."</td>
-                <td>".number_format($item["price"], 2)."</td>
-                <td>".number_format($item_price, 2)."</td>
+                <td data-label='Image'><img src='uploads/" . $item["image"] . "' alt='" . $item["name"] . "' height='50'></td>
+                <td data-label='Product Name'>".$item["name"]."</td>
+                <td data-label='Quantity'>".$item["quantity"]."</td>
+                <td data-label='Unit Price (R)'>".number_format($item["price"], 2)."</td>
+                <td data-label='Total (R)'>".number_format($item_price, 2)."</td>
               </tr>";
         $total += $item_price;
     }

@@ -67,3 +67,61 @@ body {
         .btn-checkout:hover {
             background-color: #444;
         }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 700px) {
+            .container {
+                max-width: 99vw;
+                margin: 18px 0;
+                padding: 10px 2vw;
+                border-radius: 7px;
+            }
+            h1, h2 {
+                font-size: 1.1em;
+            }
+            .navbar {
+                padding: 10px 2vw;
+            }
+            .navbar .logo {
+                font-size: 1.1rem;
+            }
+            .checkout-total {
+                font-size: 1em;
+                margin-top: 14px;
+            }
+            .btn-checkout {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 14px 0;
+                font-size: 1em;
+            }
+            table, thead, tbody, th, td, tr {
+                display: block;
+                width: 100%;
+            }
+            thead {
+                display: none;
+            }
+            tr {
+                margin-bottom: 18px;
+                border-bottom: 2px solid #eee;
+                background: #f9f9f9;
+            }
+            td {
+                padding: 10px 8px;
+                text-align: right;
+                position: relative;
+                border: none;
+                border-bottom: 1px solid #eee;
+            }
+            td:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                color: #333;
+                text-transform: uppercase;
+            }
+            td img {
+                height: 40px;
+            }
+        }

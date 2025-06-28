@@ -36,6 +36,7 @@ if (isset($_POST['submit'])) {
 <head>
 <title>EPPSIDY - Add Product</title>
 <link rel="stylesheet" href="Login.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 

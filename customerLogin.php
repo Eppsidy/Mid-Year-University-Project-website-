@@ -6,6 +6,7 @@ session_start();
 <head>
 <title>EPPIDY - LOGIN</title>
 <link rel="stylesheet" href="Login.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -13,7 +14,7 @@ session_start();
     <a href="index.php" class="logo">EPPSIDY</a>
 </div>
 
-<form action="customerLogin.php" method="POST">
+<form id="formcontainer" action="customerLogin.php" method="POST">
   
   <header class="sectionheader">
 	<h1 class="sectionheadertitle">Login</h1>

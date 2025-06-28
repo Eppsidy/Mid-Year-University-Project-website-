@@ -41,10 +41,10 @@ $customerId = $_SESSION['customer_id'];
         while ($row = $result->fetch_assoc()):
         ?>
         <tr>
-            <td><?= $row['name']; ?></td>
-            <td><?= $row['code']; ?></td>
-            <td>R<?= $row['price']; ?></td>
-            <td class="action-buttons">
+            <td data-label="Name"><?= $row['name']; ?></td>
+            <td data-label="Code"><?= $row['code']; ?></td>
+            <td data-label="Price">R<?= $row['price']; ?></td>
+            <td data-label="Actions" class="action-buttons">
                 <a class="edit" href="productedit.php?id=<?= $row['id']; ?>">Edit</a>
                 <a class="delete" href="productdelete.php?id=<?= $row['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
             </td>
@@ -69,13 +69,12 @@ $customerId = $_SESSION['customer_id'];
         while ($order = $orderResult->fetch_assoc()):
         ?>
         <tr>
-            <td>#<?= $order['id']; ?></td>
-            <td>R<?= $order['order_total']; ?></td>
-            <td><?= $order['order_date']; ?></td>
+            <td data-label="Order #">#<?= $order['id']; ?></td>
+            <td data-label="Total">R<?= $order['order_total']; ?></td>
+            <td data-label="Date"><?= $order['order_date']; ?></td>
         </tr>
         <?php endwhile; ?>
     </table>
 </div>
-
 </body>
 </html>

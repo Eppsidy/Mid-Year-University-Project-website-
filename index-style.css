@@ -1,86 +1,179 @@
-/* Global styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+/* =============================
+   Global Reset & Body
+============================= */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
   color: #211a1a;
 }
 
-/* Navigation Bar */
+/* =============================
+   Navigation Bar
+============================= */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #181818;
-  color: white;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 64px;
+  background: linear-gradient(90deg, #181818 60%, #2d2d2d 100%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 2px;
   text-decoration: none;
-  color: white;
+  color: #fff;
+  background: linear-gradient(90deg, #ffb347, #ffcc33 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Shopping Cart Section */
-#shopping-cart {
-  margin: 40px auto;
+/* Avatar Profile Dropdown */
+.profile-container {
+  position: relative;
+}
+
+.profile-dropdown {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ffcc33;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #181818;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f8f8;
+  color: #ffb347;
+}
+
+/* =============================
+   Section Title
+============================= */
+.sectionheadertitle {
+  padding: 30px;
+}
+
+/* =============================
+   Cart Table & Layout
+============================= */
+#shopping-cart, .tbl-cart {
   width: 90%;
+  margin: 40px auto;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#shopping-cart table {
+.tbl-cart table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9em;
 }
 
-#shopping-cart th, #shopping-cart td {
+.tbl-cart th, .tbl-cart td {
   padding: 10px;
   text-align: left;
 }
 
-#shopping-cart th {
+.tbl-cart th {
   background-color: #181818;
   color: white;
 }
 
-#shopping-cart td {
+.tbl-cart td {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
 }
 
-/* Buttons */
-button, .btnAddAction, #btnEmpty {
+/* =============================
+   Buttons
+============================= */
+button, .btnAddAction, #btnEmpty, .cancelbtn {
   background-color: black;
   color: white;
   padding: 10px 16px;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  font-size: 16px;
+  transition: 0.2s;
 }
 
-
-#btnEmpty {
-  float: right;
-  background-color: #ffffff;
-  border: 1px solid #d00000;
-  color: #d00000;
-  margin-bottom: 10px;
-}
-
-button:hover, .btnAddAction:hover, #btnEmpty:hover {
+button:hover,
+.btnAddAction:hover,
+.cancelbtn:hover,
+#btnEmpty:hover {
   opacity: 0.85;
 }
 
-/* Product Grid */
+button:focus,
+.btnAddAction:focus,
+.cancelbtn:focus,
+#btnEmpty:focus {
+  outline: 2px solid #ffcc33;
+  outline-offset: 2px;
+}
+
+#btnEmpty {
+  background-color: #ffffff;
+  border: 1px solid #d00000;
+  color: #d00000;
+  float: right;
+  margin-bottom: 10px;
+}
+
+/* =============================
+   Product Grid
+============================= */
 .product-grid {
   display: flex;
   flex-wrap: wrap;
@@ -94,23 +187,29 @@ button:hover, .btnAddAction:hover, #btnEmpty:hover {
   background: #ffffff;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   flex: 1 1 calc(25% - 20px);
   box-sizing: border-box;
   text-align: center;
 }
 
-.product-image {
-  width: 100%;
-  height: 200px;
+.product-image img {
+  max-width: 250px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .product-title {
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
+  white-space: normal;      /* Allow wrapping */
+  word-break: break-word;   /* Break long words if needed */
 }
 
 .product-price {
@@ -142,16 +241,56 @@ button:hover, .btnAddAction:hover, #btnEmpty:hover {
   vertical-align: middle;
 }
 
-.product-image img {
-    max-width: 250px;
-    max-height: 200px;
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    border-radius: 8px;
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 768px) {
+  .product-item {
+    flex: 1 1 calc(50% - 20px);
+  }
 }
 
+@media (max-width: 600px) {
+  .tbl-cart, .tbl-cart table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
+  .tbl-cart thead,
+  .tbl-cart tbody,
+  .tbl-cart tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
 
+  .tbl-cart th, .tbl-cart td {
+    font-size: 13px;
+    padding: 6px 4px;
+    word-break: break-word;
+  }
+
+  .cart-item-image {
+    width: 22px;
+    height: 22px;
+  }
+
+  button, .btnAddAction, .cancelbtn {
+    width: 100%;
+    margin-bottom: 6px;
+    font-size: 15px;
+    padding: 8px 0;
+  }
+
+  .sectionheadertitle {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 400px) {
+  .tbl-cart, .tbl-cart table {
+    font-size: 12px;
+  }
+}
