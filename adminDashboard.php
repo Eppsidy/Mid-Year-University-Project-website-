@@ -16,7 +16,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 
 <div class="navbar">
      <h1>Welcome Admin</h1>
-    <a href="management.php">Manage Products</a>
+    <a href="management.php">Manage Productss</a>
     <a href="manageOrders.php">Manage Orders</a>
     <a href="manageUsers.php">Manage Users</a>
     <a href="logout.php" style="float:right;">Logout</a>
