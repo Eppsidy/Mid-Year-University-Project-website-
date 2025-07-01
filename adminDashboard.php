@@ -11,6 +11,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 <head>
     <title>EPPSIDY - Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -19,7 +20,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     <a href="management.php">Manage Productss</a>
     <a href="manageOrders.php">Manage Orders</a>
     <a href="manageUsers.php">Manage Users</a>
-    <a href="logout.php" style="float:right;">Logout</a>
+    <a href="Logout.php" style="float:right;">Logout</a>
 
 </div>
 

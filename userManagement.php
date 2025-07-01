@@ -3,7 +3,7 @@ session_start();
 include 'connect.php';
 
 if (!isset($_SESSION['customer_id'])) {
-    header("Location: login.php");
+    header("Location: customerLogin.php");
     exit();
 }
 
@@ -19,7 +19,7 @@ $customerId = $_SESSION['customer_id'];
 
 <div class="navbar">
     <a href="index_loggedin.php">Home</a>
-    <a href="logout.php" style="float:right;">Logout</a>
+    <a href="Logout.php" style="float:right;">Logout</a>
 </div>
 
 <div class="container">

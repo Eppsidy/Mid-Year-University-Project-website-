@@ -13,6 +13,7 @@ if (!isset($_SESSION["cart_item"]) || empty($_SESSION["cart_item"])) {
 <head>
     <title>EPPSIDY - Checkout</title>
     <link rel="stylesheet" href="checkout-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 

@@ -91,19 +91,23 @@ if (!empty($_GET["action"])) {
     <?php if(isset($_SESSION['userName'])): ?>
     <div class="profile-dropdown">
         <div class="profile-icon" onclick="toggleDropdown(event)">
-            <?php echo htmlspecialchars(strtoupper($_SESSION['userName'])); ?>
+            <img src="uploads/default.png" alt="Profile Picture" style="width:40px;height:40px;border-radius:50%;object-fit:cover;vertical-align:middle;">
         </div>
         <div class="dropdown-menu" id="dropdownMenu">
-            <span class="dropdown-user"><?php echo htmlspecialchars($_SESSION['userName']); ?></span>
+            <span class="dropdown-user">
+                <img src="uploads/default.png" alt="Profile Picture" style="width:40px;height:40px;border-radius:50%;object-fit:cover;vertical-align:middle;">
+                <br>
+                <?php echo htmlspecialchars($_SESSION['userName']); ?>
+            </span>
+            <a href="cart.php">🛒 Cart</a>
             <a href="addproduct.php">➕ Add Product</a>
             <a href="userManagement.php">👤 User Management</a>
-            <a href="checkout.php">💳 Checkout</a>
             <a href="Logout.php">🚪 Logout</a>
         </div>
     </div>
     <?php else: ?>
     <div class="profile-dropdown">
-        <div class="profile-icon" onclick="toggleDropdown(event)">G</div>
+        <div class="profile-icon" onclick="toggleDropdown(event)">Guest</div>
         <div class="dropdown-menu" id="dropdownMenu">
             <a href="cart.php">🛒 Cart</a>
             <a href="customerLogin.php">🔐 Login</a>

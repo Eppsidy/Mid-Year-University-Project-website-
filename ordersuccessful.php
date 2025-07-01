@@ -8,6 +8,7 @@ $orderId = $_GET['order_id'];
 <head>
     <title>Order Successful</title>
     <link rel="stylesheet" href="ordersuccessful.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
