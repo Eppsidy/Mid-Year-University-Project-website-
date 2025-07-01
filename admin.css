@@ -139,7 +139,7 @@ button:hover, input[type="submit"]:hover, .btn:hover {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .navbar {
         padding: 8px 2vw;
         font-size: 0.95em;
